@@ -1,4 +1,6 @@
 # awkwordle
 Python word game with a terminal text-based interface.  Another Wordle Knockoff... AWKwordle!
 
-Requirements:  Python 3 and pandas library
+Installation Requirements:  Python 3 and pandas library
+
+To run from command line:  python3 awkwordle.py
