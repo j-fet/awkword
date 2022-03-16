@@ -13,4 +13,4 @@ Run from command line:  "python3 awkword.py"
 
 # Notes
 
-The dictionary consists of 47,325 words and includes a "frequency index" derived from Google's 2020 Ngram data (which they've been kind enough to make available for free).  The frequency index is used as a difficulty metric for target words; less-frequently used words appear in higher game levels.  The dictionary for this game has been filtered to exclude proper nouns (names, countries, products, etc.).  In addition to Google's Ngram frequency data, other open source dictionaries (WordNet, etc.) were used to filter for commonality and validity.
+The dictionary consists of 47,325 words and includes a "frequency index" derived from Google's Ngram data (which they've been kind enough to make available for free).  The frequency index is used as a difficulty metric for target words; less-frequently used words appear in higher game levels.  The dictionary for this game has been filtered to exclude proper nouns (names, countries, products, etc.).  In addition to Google's Ngram frequency data, other open source dictionaries (WordNet, etc.) were used to filter for commonality and validity.
