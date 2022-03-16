@@ -255,7 +255,7 @@ def time_string(seconds, limit):
 ##Utility i/o functions and formatting variables
 
 RESET = "\033[00m"
-FAINT_GRAY = "\033[00;2;97m"
+FAINT_GRAY = "\033[00;2m"
 GREEN = "\033[00;92m"
 YELLOW = "\033[00;93m"
 
