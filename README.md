@@ -1,5 +1,5 @@
-# awkword - solve all 15 levels!
-Python word game with a terminal text-based interface.  Another Wordle Knockoff... AWKwordle!
+# Solve all 15 levels!
+Python word game with a terminal text-based interface.  Another Wordle Knockoff... AWKword!
 
 # Installation Requirements:
 Python 3 - https://www.python.org/
