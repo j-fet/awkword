@@ -6,7 +6,7 @@ Python 3 - https://www.python.org/
 
 pandas - https://pandas.pydata.org/
 
-Extract all files above to a single folder and from terminal command line enter:  "python3 awkword.py"
+Extract awkword files to a single folder, navigate to that directory in your terminal, and from the command line enter:  "python3 awkword.py"
 
 ![Screenshot from 2022-03-15 16-47-22](https://user-images.githubusercontent.com/101674931/158484934-eb48f7c7-fb89-4212-ab2a-726753c9a542.png)
 
