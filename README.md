@@ -7,7 +7,7 @@ These two packages must be installed on your computer
 2. pandas - https://pandas.pydata.org/
 
 ### Steps to install
-- Click Code button above, and select **Download Zip**
+- Click Code button above, and select **Download ZIP**
 - Extract all files to a single folder on your computer
 - Navigate to that directory in your terminal (for Windows use PowerShell)
 - From command line enter:  **"python3 awkword.py"**
