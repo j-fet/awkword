@@ -52,9 +52,9 @@ def start_game():
 
 def play_levels(start_level):
 
-    for i in range((start_level-1),len(LEVELS)):
+    for lvl in range((start_level-1),len(LEVELS)):
 
-        level = LEVELS[i] #grab the level tuple
+        level = LEVELS[lvl] #grab the level tuple
 
         shortest = level[0]
         longest = level[1]
@@ -65,6 +65,8 @@ def play_levels(start_level):
         solution_count = level[4] #number of solutions under time limit needed to advance
         minutes = level[5] #time limit
 
+        current_level = lvl+1
+        
         min_FI = dictionary.FI.quantile(min_frequency)
         max_FI = dictionary.FI.quantile(max_frequency)
 
@@ -82,7 +84,7 @@ def play_levels(start_level):
             print("\033c\033[3J", end='')
             print("| "+GREEN+"AWK"+RESET+"word - "+GREEN+"A"+RESET+"nother "+GREEN+"W"+RESET+"ordle "+GREEN+"K"+RESET+"nockoff")
             print("|==========================================")
-            print("| LEVEL: "+YELLOW+str(i+1)+RESET)
+            print("| LEVEL: "+YELLOW+str(current_level)+RESET)
             print("| Word length: "+str(shortest)+" - "+str(longest))
             print("| Answer pool: {:,}".format(len(targets))+" (frequency: "+word_desc+")")
             print("| Play mode: "+PLAY_MODES[playmode])
@@ -90,10 +92,10 @@ def play_levels(start_level):
 
             seconds = play(target.Word, shortest, longest, playmode)
 
-            if seconds > 0:   #seconds -1 if player entered igiveup!
-                stats.loc[len(stats)] = [i+1, target.Word, word_rank(target.FI), seconds]  #append stats for current solution
+            if seconds > 0:   #seconds will be -1 if player entered igiveup!
+                stats.loc[len(stats)] = [current_level, target.Word, word_rank(target.FI), seconds]  #append stats for current solution
 
-            solved = len(stats[(stats.Level == (i+1)) & (stats.Seconds < (minutes*60))])
+            solved = len(stats[(stats.Level == (current_level)) & (stats.Seconds < (minutes*60))])
 
             if solved < solution_count:
                 print("| You've solved "+GREEN+str(solved)+RESET+" words under "+str(minutes)+" minutes ("+str(solution_count)+" to advance)")
@@ -101,7 +103,7 @@ def play_levels(start_level):
                 print()
                 print(YELLOW+"--> Congratulations!! You have advanced to the next level."+RESET)
             print()
-            display_stats()
+            display_stats(current_level)
             print()
 
             if input("| Press enter to continue (or 'Q' to quit) ") == 'Q':
@@ -223,13 +225,11 @@ def word_rank(FI):
         rank -= .01
     return 100
 
-def display_stats():
-    if len(stats) < 1: return
+def display_stats(current_level):
+    current = stats[stats.Level == current_level] #slice of stats dataframe for current level
+    if len(current) < 1: return #no stats to display
 
-    current_level = stats.iloc[-1].Level #grab last level played from stats dataframe
     time_limit = LEVELS[current_level-1][5]*60
-    current = stats[stats.Level == current_level]
-
     print("Level :   Word   :  Rank  :  Time")
     print("--------------------------------------")
     print(" "*(3-len(str(current_level)))+YELLOW+str(current_level)+RESET+" "*5,end='')
