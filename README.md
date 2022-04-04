@@ -1,14 +1,14 @@
 ## Solve all 15 levels!
-This Python word game sports a text-based interface for your favority Linux, Windows or Mac terminal. You have unlimited attempts to solve each word, but *make it snappy* - your'e being timed.  The words get longer and/or more difficult as the levels progress.
+This Python word game sports a text-based interface for your favorite Linux, Windows or Mac terminal. You have unlimited attempts to solve each word, but *make it snappy* - your'e being timed.  The words get longer and/or more difficult as the levels progress.
 
 ## Installation
 These two packages must be installed on your computer
 1. Python 3 - https://www.python.org/
 2. pandas - https://pandas.pydata.org/
 
-### Steps to install
-- Click Code button above, and select **Download ZIP**
-- Extract all files to a single folder on your computer
+### Steps to install awkword.py
+- Click **Code** button above, and select **Download ZIP**
+- Extract files to a single folder on your computer
 - Navigate to that directory in your terminal (for Windows use PowerShell)
 - From command line enter:  **"python3 awkword.py"**
 
