@@ -10,7 +10,7 @@ These two packages must be installed on your computer
 - Click **Code** button above, and select **Download ZIP**
 - Extract files to a single folder on your computer
 - Navigate to that directory in your terminal (for Windows use PowerShell)
-- From command line enter:  **"python3 awkword.py"**
+- From command line enter:  **"python awkword.py"**
 
 ![Screenshot from 2022-03-15 16-47-22](https://user-images.githubusercontent.com/101674931/158484934-eb48f7c7-fb89-4212-ab2a-726753c9a542.png)
 
