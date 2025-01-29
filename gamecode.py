@@ -17,7 +17,7 @@ WORD_DIFFICULTY = [(.975,1.0,"top 2.5%"),
 
 #PLAY_MODES [0-2]
 PLAY_MODES = [("Easy (no constraints)"),
-              ("Hard (match clues)"),
+              ("Hard (match some clues)"),
               ("Extra Hard (match all clues)")]
 
 #(shortest, longest, word_difficulty, play_mode, solution count, time limit in minutes)
